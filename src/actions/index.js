@@ -17,7 +17,7 @@ export const TEMPERAMENTS_FILTER = "TEMPERAMENTS_FILTER";
 
 export const getAllBreeds = () => { return async dispatch => {
     try {
-        let breeds = await axios.get("http://localhost:3001/dogs");
+        let breeds = await axios.get("/dogs");
         return dispatch({
             type: GET_ALL_BREEDS,
             payload: breeds.data
@@ -30,7 +30,7 @@ export const getAllBreeds = () => { return async dispatch => {
 
 export const getAllTemperaments = () => async dispatch => {
     try {
-        let allTemperaments = await axios.get("http://localhost:3001/temperaments");
+        let allTemperaments = await axios.get("/temperaments");
         return dispatch({
             type: GET_ALL_TEMPERAMENTS,
             payload: allTemperaments.data
@@ -42,7 +42,7 @@ export const getAllTemperaments = () => async dispatch => {
 
 export const getBreedDetails = (id) => async dispatch => {
     try {
-        const breed = await axios.get(`http://localhost:3001/dogs/${id}`);
+        const breed = await axios.get(`/dogs/${id}`);
         return dispatch({
             type: GET_BREED_DETAILS,
             payload: breed.data[0]
@@ -69,7 +69,7 @@ export const setCurrentPage = (page) => {
 
 export const searchBreed = (name) => async dispatch  => {
     try {
-        let breed = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+        let breed = await axios.get(`/dogs?name=${name}`);
         return dispatch({
             type: SEARCH_BREED,
             payload: breed.data
@@ -83,7 +83,7 @@ export const searchBreed = (name) => async dispatch  => {
 }
 
 export const createBreed =  async breed => {
-    let breeds = await axios.post('http://localhost:3001/dogs', breed);
+    let breeds = await axios.post('/dogs', breed);
     return {
         type: CREATE_BREED,
         payload: breeds
