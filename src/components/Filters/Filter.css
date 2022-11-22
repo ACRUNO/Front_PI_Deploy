@@ -1,0 +1,38 @@
+.cont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    width: 50%;
+    padding: 30px;
+}
+
+.selects select {
+    position: relative;
+    /* background-color: dodgerblue; */
+    background: #202020;
+    color: rgb(245, 245, 245);
+    /* font-family: serif; */
+    font-size: medium;
+    border: 6px solid transparent;
+    border-radius: 5px;
+}
+
+.selects:hover select {
+    background: #20202086;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.selects option {
+    border: 6px solid transparent;
+    border-radius: 10px;
+    background: #202020c0;
+}

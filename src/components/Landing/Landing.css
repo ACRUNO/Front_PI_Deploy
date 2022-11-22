@@ -1,0 +1,125 @@
+.page {
+    background-image: url("https://img.freepik.com/free-photo/group-portrait-adorable-puppies_53876-64778.jpg?w=2000");
+    background-size: cover;
+    height: 100vh;
+    font-size: 50px;
+    background-repeat: no-repeat;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7%;
+    text-decoration: none;
+    padding-left: 6%;
+}
+
+a {
+    text-decoration: none #000000 solid;
+}
+
+.button {
+    background-color: #000000;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #dadada;
+    display: flex;
+    /* font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    /* text-decoration-thickness: auto; */
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.button:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+
+@media (min-width: 768px) {
+    .button {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+
+.button {
+    background-color: transparent;
+    border: 1px solid #266DB6;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 16px 30px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover,
+.button:active {
+    outline: 0;
+}
+
+.button:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.button:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.button:hover:before {
+    background-color: #000000;
+}
+
+@media (min-width: 900px) {
+    .button {
+        padding: 30px 90px;
+    }
+}
