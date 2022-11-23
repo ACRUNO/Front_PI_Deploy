@@ -82,12 +82,12 @@ export const searchBreed = (name) => async dispatch  => {
     }
 }
 
-export const createBreed =  async breed => {
+export const createBreed =  breed => async dispatch => {
     let breeds = await axios.post('/dogs', breed);
-    return {
+    return dispatch({
         type: CREATE_BREED,
         payload: breeds
-    }
+    })
 } 
 
 
